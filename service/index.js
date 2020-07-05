@@ -4,6 +4,7 @@ import axios from 'axios'
 import config from './config'
 
 if (process.server) {
+  console.log('process',process)
   config.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
 }
 
